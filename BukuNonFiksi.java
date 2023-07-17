@@ -1,25 +1,12 @@
-public abstract class BukuNonFiksi extends Buku {
-    public BukuNonFiksi(String judul, int hargaBeli, int hargaJual, int jumlahStok) {
-        super(judul, hargaBeli, hargaJual, jumlahStok);
+class BukuNonFiksi extends Buku {
+    public BukuNonFiksi(String judul, double hargaBeli, double hargaJual, int stok) {
+        super(judul, hargaBeli, hargaJual, stok);
     }
-
-    @Override
-    public void tambahStok(int jumlah) {
-        jumlahStok += jumlah;
-    }
-
-    public void kurangiStok(int jumlah) {
-        jumlahStok -= jumlah;
-        if (jumlahStok <= 0) {
-            System.out.println("Stok " + judul + " habis.");
-        }
-    }
-
+ 
     @Override
     public void tampilkanInfo() {
+        System.out.println("Jenis: Buku Non-Fiksi");
         System.out.println("Judul: " + judul);
-        System.out.println("Harga Beli: " + hargaBeli);
-        System.out.println("Harga Jual: " + hargaJual);
-        System.out.println("Jumlah Stok: " + jumlahStok);
+        System.out.println("Stok: " + stok);
     }
 }
