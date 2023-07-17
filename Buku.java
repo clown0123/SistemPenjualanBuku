@@ -1,17 +1,43 @@
 public abstract class Buku {
+ 
     protected String judul;
-    protected int hargaBeli;
-    protected int hargaJual;
-    protected int jumlahStok;
-    
-    public Buku(String judul, int hargaBeli, int hargaJual, int jumlahStok) {
+    protected double hargaBeli;
+    protected double hargaJual;
+    protected int stok;
+ 
+    public Buku(String judul, double hargaBeli, double hargaJual, int stok) {
         this.judul = judul;
         this.hargaBeli = hargaBeli;
         this.hargaJual = hargaJual;
-        this.jumlahStok = jumlahStok;
+        this.stok = stok;
     }
-    
-    public abstract void tambahStok(int jumlah);
-    public abstract void kurangStok(int jumlah);
+ 
+    public String getJudul() {
+        return judul;
+    }
+ 
+    public double getHargaBeli() {
+        return hargaBeli;
+    }
+ 
+    public double getHargaJual() {
+        return hargaJual;
+    }
+ 
+    public int getStok() {
+        return stok;
+    }
+ 
+    public void tambahStok(int jumlah) {
+        stok += jumlah;
+    }
+ 
+    public void kurangiStok(int jumlah) {
+        stok -= jumlah;
+        if (stok == 0) {
+            System.out.println("Stok " + judul + " sudah mencapai nol.");
+        }
+    }
+ 
     public abstract void tampilkanInfo();
 }
