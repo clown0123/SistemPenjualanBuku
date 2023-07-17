@@ -1,23 +1,26 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 class PenjualanBuku {
-    private static double modalAwal = 5000000.0;
-    private static double modalBerjalan = 100000000.0;
+    private static double modalAwal = 2000000.0;
+    private static double modalBerjalan = 2000000.0;
     private static ArrayList<Buku> daftarBuku = new ArrayList<>();
  
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
  
                 // Menambahkan beberapa buku sebagai contoh
-        daftarBuku.add(new BukuFiksi("Takuban Perahu", 8, 15, 20));
-        daftarBuku.add(new BukuFiksi("Timunmas", 10, 18, 15));
-        daftarBuku.add(new BukuNonFiksi("Joseph Stalin : Economic Problems of Socialism in The U.S.S.R", 12, 20, 30));
-        daftarBuku.add(new BukuNonFiksi("Table Talk, 1941-1944", 9, 16, 25));
-        daftarBuku.add(new Majalah("Benci dan Rindu pada salju", 5, 10, 50, 123));
-        daftarBuku.add(new Majalah("National", 6, 12, 40, 456));
+        daftarBuku.add(new BukuFiksi("1984 : oleh George Orwell", 8000, 15000, 10));
+        daftarBuku.add(new BukuFiksi("The Alchemist : oleh Paulo Coelho", 15000, 20000, 5));
+        daftarBuku.add(new BukuNonFiksi("The Diary of a Young Girl : oleh Anne frank", 10000, 15000, 35));
+        daftarBuku.add(new BukuNonFiksi("Thinking, fast and slow : oleh Daniel Kahnemamn", 7000, 12000, 8));
+        daftarBuku.add(new Majalah("National Geographic", 10000, 15000, 13, 212));
+        daftarBuku.add(new Majalah("The Economist", 5000, 18000, 19, 666));
  
         while (true) {
             System.out.println("*******************************************************************************************");
             System.out.println("Sistem Penjualan Buku");
-            System.out.println("By: ARDHITO BINTANG PAMUNGKAS, <NIM: 22201183>");
+            System.out.println("By: Gusti Ary Wicaksana, <NIM: 22201216>");
             System.out.println("*******************************************************************************************5");
             System.out.println("Silahkan pilih menu: ");
             System.out.println("1. Tampilkan Laporan Modal");
@@ -118,4 +121,3 @@ class PenjualanBuku {
         return null;
     }
 }
-
